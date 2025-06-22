@@ -1,0 +1,28 @@
+services:
+  db:
+    image: postgres:14
+    container_name: supermarket-db
+    restart: always
+    environment:
+      POSTGRES_DB: supermarket
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
+
+  app_a:
+    build: ./app_a
+    depends_on:
+      - db
+
+  app_b:
+    build: ./app_b
+    depends_on:
+      - db
+
+  data_loader:
+    build: ./data_loader
+    depends_on:
+      - db
