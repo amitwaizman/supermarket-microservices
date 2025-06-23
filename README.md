@@ -29,7 +29,7 @@ The system consists of two services (applications):
 
 ### System Architecture Diagram
 
-![aric1](https://github.com/user-attachments/assets/ce493533-48a8-4d69-a550-801ee951fd55)
+![aric1](https://github.com/user-attachments/assets/29c21ceb-43aa-45e4-966a-3232a2c12534)
 
 
 
